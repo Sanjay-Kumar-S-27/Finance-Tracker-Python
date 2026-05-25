@@ -9,8 +9,9 @@ from modify_transaction import modify_transactions
 from manage_friends import manage_friends
 from reports import reports
 from db_view import view_tables
+from cred import API_URL
 
-API_URL = "http://127.0.0.1:8001"
+API_URL = API_URL
 balance_data = requests.get(f"{API_URL}/balance").json()
 opening_balance = balance_data.get("Opening_balance")
 current_balance = balance_data.get("current_balance")
